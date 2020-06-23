@@ -18,7 +18,8 @@
 		CC1FFCB0248C9FFF00C6A3D7 /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAD248C9FFF00C6A3D7 /* Board.png */; };
 		CC1FFCB1248C9FFF00C6A3D7 /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */; };
 		CC1FFCB2248C9FFF00C6A3D7 /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */; };
-		CC1FFCB4248CA00B00C6A3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FFCB3248CA00B00C6A3D7 /* ViewController.swift */; };
+		CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */; };
+		CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		CC1FFCAD248C9FFF00C6A3D7 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
 		CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
-		CC1FFCB3248CA00B00C6A3D7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 				CC1FFC94248C9F5E00C6A3D7 /* AppDelegate.swift */,
 				CC1FFC96248C9F5E00C6A3D7 /* SceneDelegate.swift */,
 				CC1FFC9B248C9F5E00C6A3D7 /* ContentView.swift */,
-				CC1FFCB3248CA00B00C6A3D7 /* ViewController.swift */,
+				CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */,
+				CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */,
 				CC1FFC9D248C9F5F00C6A3D7 /* Assets.xcassets */,
 				CC1FFCA2248C9F5F00C6A3D7 /* LaunchScreen.storyboard */,
 				CC1FFCAB248C9FF300C6A3D7 /* Main.storyboard */,
@@ -168,9 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1FFCB4248CA00B00C6A3D7 /* ViewController.swift in Sources */,
+				CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */,
 				CC1FFC9A248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld in Sources */,
 				CC1FFC95248C9F5E00C6A3D7 /* AppDelegate.swift in Sources */,
+				CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */,
 				CC1FFC9C248C9F5E00C6A3D7 /* ContentView.swift in Sources */,
 				CC1FFC97248C9F5E00C6A3D7 /* SceneDelegate.swift in Sources */,
 			);

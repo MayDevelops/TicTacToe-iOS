@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     
     var activePlayer = 1 //Cross
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
