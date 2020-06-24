@@ -19,6 +19,7 @@
 		CC1FFCB1248C9FFF00C6A3D7 /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */; };
 		CC1FFCB2248C9FFF00C6A3D7 /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */; };
 		CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */; };
+		CC6D770D24A315C900424959 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6D770C24A315C900424959 /* MainViewController.swift */; };
 		CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
 		CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CC6D770C24A315C900424959 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				CC1FFC94248C9F5E00C6A3D7 /* AppDelegate.swift */,
 				CC1FFC96248C9F5E00C6A3D7 /* SceneDelegate.swift */,
 				CC1FFC9B248C9F5E00C6A3D7 /* ContentView.swift */,
+				CC6D770C24A315C900424959 /* MainViewController.swift */,
 				CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */,
 				CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */,
 				CC1FFC9D248C9F5F00C6A3D7 /* Assets.xcassets */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6D770D24A315C900424959 /* MainViewController.swift in Sources */,
 				CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */,
 				CC1FFC9A248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld in Sources */,
 				CC1FFC95248C9F5E00C6A3D7 /* AppDelegate.swift in Sources */,

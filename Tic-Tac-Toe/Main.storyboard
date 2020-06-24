@@ -9,7 +9,7 @@
         <!--MainMenuViewController-->
         <scene sceneID="Uia-2m-CKD">
             <objects>
-                <viewController title="MainMenuViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="gHe-O3-Wmd" sceneMemberID="viewController">
+                <viewController title="MainMenuViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="gHe-O3-Wmd" customClass="MainViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rcF-ZN-nMZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iEF-aM-ehu"/>
@@ -33,7 +33,7 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="To High Scores"/>
                                 <connections>
-                                    <segue destination="4uF-2c-B62" kind="presentation" id="zgO-xy-KD6"/>
+                                    <segue destination="4uF-2c-B62" kind="presentation" destinationCreationSelector="ToHighScores:" id="zgO-xy-KD6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -249,7 +249,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F4g-sH-A6U"/>
+        <segue reference="Y8V-lw-YHy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Board.png" width="539" height="534"/>

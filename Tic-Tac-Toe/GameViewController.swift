@@ -9,7 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
+    var HighScores = HighScoresViewController()
     var activePlayer = 1 //Cross
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
@@ -45,10 +45,13 @@ class GameViewController: UIViewController {
                 if gameState[combination[0]] == 1
                 {
                     label.text = "CROSS HAS WON!"
+                    HighScores.IncX()
                 }
                 else
                 {
                     label.text = "NOUGHT HAS WON!"
+                    HighScores.IncO()
+
                 }
                 
                 playAgainButton.isHidden = false

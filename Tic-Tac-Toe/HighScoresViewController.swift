@@ -14,23 +14,28 @@ class HighScoresViewController: UIViewController {
     
     @IBOutlet weak var oScore: UILabel!
     
-    var xPlayerScore = 0;
-    var oPlayerScore = 0;
+     var xPlayerScore = 0;
+     var oPlayerScore = 0;
     
     
-    @IBAction func IncrementX(_ sender: Any) {
-        xScore.text = String(xPlayerScore)
-        xPlayerScore += 1;
-        
+    func IncX() -> Int {
+        xPlayerScore += 1
+        print(xPlayerScore)
+        return xPlayerScore
     }
-    
-    
+    func IncO() -> Void {
+           oPlayerScore += 1
+        print(oPlayerScore)
+       }
+
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        xScore.text = String(xPlayerScore)
+        oScore.text = String(oPlayerScore)
 
         // Do any additional setup after loading the view.
     }
