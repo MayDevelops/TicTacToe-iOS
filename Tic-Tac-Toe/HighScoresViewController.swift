@@ -11,22 +11,11 @@ import UIKit
 class HighScoresViewController: UIViewController {
     
     @IBOutlet weak var xScore: UILabel!
-    
     @IBOutlet weak var oScore: UILabel!
     
-     var xPlayerScore = 0;
-     var oPlayerScore = 0;
-    
-    
-    func IncX() -> Int {
-        xPlayerScore += 1
-        print(xPlayerScore)
-        return xPlayerScore
-    }
-    func IncO() -> Void {
-           oPlayerScore += 1
-        print(oPlayerScore)
-       }
+    var GameData = GameViewController()
+    var recievedXScore: Int = 0
+    var recievedOScore: Int = 0
 
     
     
@@ -34,8 +23,8 @@ class HighScoresViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        xScore.text = String(xPlayerScore)
-        oScore.text = String(oPlayerScore)
+        xScore.text = String(recievedXScore)
+        oScore.text = String(recievedOScore)
 
         // Do any additional setup after loading the view.
     }
