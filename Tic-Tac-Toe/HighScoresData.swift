@@ -8,22 +8,10 @@
 
 import Foundation
 
-/*
-class HighScoresData : GameViewController {
-    var xPlayerScore = 9;
-    var oPlayerScore = 3;
-      
-      
-      func IncX() -> Int {
-          xPlayerScore += 1
-          print(xPlayerScore)
-          return xPlayerScore
-      }
-      func IncO() -> Void {
-             oPlayerScore += 1
-          print(oPlayerScore)
-         }
+struct PlayerData {
+    
+    static var xScoreX: Int = 0
+    static var oScoreO: Int = 0
     
     
 }
-*/

@@ -13,22 +13,15 @@ class HighScoresViewController: UIViewController {
     @IBOutlet weak var xScore: UILabel!
     @IBOutlet weak var oScore: UILabel!
     
-    var GameData = GameViewController()
-    var recievedXScore: Int = 0
-    var recievedOScore: Int = 0
-
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        xScore.text = String(recievedXScore)
-        oScore.text = String(recievedOScore)
-
+        xScore.text = String(PlayerData.xScoreX)
+        oScore.text = String(PlayerData.oScoreO)
+        
         // Do any additional setup after loading the view.
     }
     
+   
 
     /*
     // MARK: - Navigation
