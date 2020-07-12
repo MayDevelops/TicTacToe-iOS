@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         ToHighScores.frame = CGRect(x: self.view.frame.size.width/2 - ToHighScores.frame.size.width/2, y: 357.5, width: 100, height: 100)
     }
     
-    
+    //hellotest
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUpConstraints()
