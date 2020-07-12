@@ -17,36 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="beW-YU-i8K">
-                                <rect key="frame" x="146.5" y="365" width="121" height="166"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phd-nt-hmQ">
-                                        <rect key="frame" x="25.5" y="0.0" width="70" height="33"/>
-                                        <color key="backgroundColor" red="0.28341564120000001" green="0.28341564120000001" blue="0.28341564120000001" alpha="0.1852442782" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <state key="normal" title="To Game">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-0k-0r1">
-                                        <rect key="frame" x="0.0" y="133" width="121" height="33"/>
-                                        <color key="backgroundColor" red="0.28341564120000001" green="0.28341564120000001" blue="0.28341564120000001" alpha="0.1852442782" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <state key="normal" title="To High Scores">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.84152363989637302" green="0.67415139726556172" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="beW-YU-i8K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="C6f-31-vB5"/>
-                            <constraint firstItem="beW-YU-i8K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rBR-RZ-MeB"/>
-                        </constraints>
+                        <color key="backgroundColor" red="1" green="0.80110809168543162" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
