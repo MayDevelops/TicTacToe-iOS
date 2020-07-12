@@ -20,6 +20,9 @@
 		CC1FFCB2248C9FFF00C6A3D7 /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */; };
 		CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */; };
 		CC37BFF924A5B38F0091322D /* HighScoresData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37BFF824A5B38F0091322D /* HighScoresData.swift */; };
+		CC6818BC24BAA1A300033ED0 /* BackButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */; };
+		CC6818BE24BAB98A00033ED0 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6818BD24BAB98A00033ED0 /* FadeSegue.swift */; };
+		CC6818C124BAC6FD00033ED0 /* BoardSeeThrough.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */; };
 		CC6D770D24A315C900424959 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6D770C24A315C900424959 /* MainViewController.swift */; };
 		CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
 		CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CC37BFF824A5B38F0091322D /* HighScoresData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresData.swift; sourceTree = "<group>"; };
+		CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonIcon.png; sourceTree = "<group>"; };
+		CC6818BD24BAB98A00033ED0 /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
+		CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoardSeeThrough.png; sourceTree = "<group>"; };
 		CC6D770C24A315C900424959 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,7 @@
 		CC1FFC88248C9F5E00C6A3D7 = {
 			isa = PBXGroup;
 			children = (
+				CC6818B824BA9FE000033ED0 /* Media */,
 				CC1FFC93248C9F5E00C6A3D7 /* Tic-Tac-Toe */,
 				CC1FFC92248C9F5E00C6A3D7 /* Products */,
 			);
@@ -81,14 +88,12 @@
 				CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */,
 				CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */,
 				CC37BFF824A5B38F0091322D /* HighScoresData.swift */,
+				CC6818BF24BAB98F00033ED0 /* SegueClasses */,
 				CC1FFC9D248C9F5F00C6A3D7 /* Assets.xcassets */,
 				CC1FFCA2248C9F5F00C6A3D7 /* LaunchScreen.storyboard */,
 				CC1FFCAB248C9FF300C6A3D7 /* Main.storyboard */,
 				CC1FFCA5248C9F5F00C6A3D7 /* Info.plist */,
 				CC1FFC98248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld */,
-				CC1FFCAD248C9FFF00C6A3D7 /* Board.png */,
-				CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */,
-				CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */,
 				CC1FFC9F248C9F5F00C6A3D7 /* Preview Content */,
 			);
 			path = "Tic-Tac-Toe";
@@ -100,6 +105,26 @@
 				CC1FFCA0248C9F5F00C6A3D7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC6818B824BA9FE000033ED0 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				CC1FFCAD248C9FFF00C6A3D7 /* Board.png */,
+				CC1FFCAE248C9FFF00C6A3D7 /* Cross.png */,
+				CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */,
+				CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */,
+				CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		CC6818BF24BAB98F00033ED0 /* SegueClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CC6818BD24BAB98A00033ED0 /* FadeSegue.swift */,
+			);
+			path = SegueClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,10 +188,12 @@
 				CC1FFCB0248C9FFF00C6A3D7 /* Board.png in Resources */,
 				CC1FFCA4248C9F5F00C6A3D7 /* LaunchScreen.storyboard in Resources */,
 				CC1FFCA1248C9F5F00C6A3D7 /* Preview Assets.xcassets in Resources */,
+				CC6818BC24BAA1A300033ED0 /* BackButtonIcon.png in Resources */,
 				CC1FFC9E248C9F5F00C6A3D7 /* Assets.xcassets in Resources */,
 				CC1FFCB2248C9FFF00C6A3D7 /* Nought.png in Resources */,
 				CC1FFCB1248C9FFF00C6A3D7 /* Cross.png in Resources */,
 				CC1FFCAC248C9FF300C6A3D7 /* Main.storyboard in Resources */,
+				CC6818C124BAC6FD00033ED0 /* BoardSeeThrough.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +208,7 @@
 				CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */,
 				CC1FFC9A248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld in Sources */,
 				CC1FFC95248C9F5E00C6A3D7 /* AppDelegate.swift in Sources */,
+				CC6818BE24BAB98A00033ED0 /* FadeSegue.swift in Sources */,
 				CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */,
 				CC37BFF924A5B38F0091322D /* HighScoresData.swift in Sources */,
 				CC1FFC9C248C9F5E00C6A3D7 /* ContentView.swift in Sources */,
@@ -332,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "May.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "May.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
