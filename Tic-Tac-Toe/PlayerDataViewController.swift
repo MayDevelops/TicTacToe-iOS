@@ -1,25 +1,21 @@
 //
-//  HighScoresViewController.swift
+//  PlayerDataViewController.swift
 //  Tic-Tac-Toe
 //
-//  Created by JC May on 6/22/20.
+//  Created by JC May on 7/12/20.
 //  Copyright © 2020 JC May. All rights reserved.
 //
 
 import UIKit
 
-class HighScoresViewController: UIViewController {
-    
-    @IBOutlet weak var xScore: UILabel!
-    @IBOutlet weak var oScore: UILabel!
-    
+class PlayerDataViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        xScore.text = String(ScoreData.xScoreX)
-        oScore.text = String(ScoreData.oScoreO)
-        
+
         // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation

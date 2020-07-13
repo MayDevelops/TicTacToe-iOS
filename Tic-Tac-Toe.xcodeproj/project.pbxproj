@@ -20,6 +20,8 @@
 		CC1FFCB2248C9FFF00C6A3D7 /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */; };
 		CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */; };
 		CC37BFF924A5B38F0091322D /* HighScoresData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC37BFF824A5B38F0091322D /* HighScoresData.swift */; };
+		CC4E20CE24BBF75500F891B2 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E20CD24BBF75500F891B2 /* PlayerData.swift */; };
+		CC4E20D024BBFAA600F891B2 /* PlayerDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E20CF24BBFAA600F891B2 /* PlayerDataViewController.swift */; };
 		CC6818BC24BAA1A300033ED0 /* BackButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */; };
 		CC6818BE24BAB98A00033ED0 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6818BD24BAB98A00033ED0 /* FadeSegue.swift */; };
 		CC6818C124BAC6FD00033ED0 /* BoardSeeThrough.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */; };
@@ -43,6 +45,8 @@
 		CC1FFCAF248C9FFF00C6A3D7 /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
 		CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CC37BFF824A5B38F0091322D /* HighScoresData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresData.swift; sourceTree = "<group>"; };
+		CC4E20CD24BBF75500F891B2 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		CC4E20CF24BBFAA600F891B2 /* PlayerDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataViewController.swift; sourceTree = "<group>"; };
 		CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonIcon.png; sourceTree = "<group>"; };
 		CC6818BD24BAB98A00033ED0 /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
 		CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoardSeeThrough.png; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				CC1FFC9B248C9F5E00C6A3D7 /* ContentView.swift */,
 				CC6D770C24A315C900424959 /* MainViewController.swift */,
 				CC1FFCB3248CA00B00C6A3D7 /* GameViewController.swift */,
+				CC4E20CF24BBFAA600F891B2 /* PlayerDataViewController.swift */,
+				CC4E20CD24BBF75500F891B2 /* PlayerData.swift */,
 				CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */,
 				CC37BFF824A5B38F0091322D /* HighScoresData.swift */,
 				CC6818BF24BAB98F00033ED0 /* SegueClasses */,
@@ -208,8 +214,10 @@
 				CC1FFCB4248CA00B00C6A3D7 /* GameViewController.swift in Sources */,
 				CC1FFC9A248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld in Sources */,
 				CC1FFC95248C9F5E00C6A3D7 /* AppDelegate.swift in Sources */,
+				CC4E20D024BBFAA600F891B2 /* PlayerDataViewController.swift in Sources */,
 				CC6818BE24BAB98A00033ED0 /* FadeSegue.swift in Sources */,
 				CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */,
+				CC4E20CE24BBF75500F891B2 /* PlayerData.swift in Sources */,
 				CC37BFF924A5B38F0091322D /* HighScoresData.swift in Sources */,
 				CC1FFC9C248C9F5E00C6A3D7 /* ContentView.swift in Sources */,
 				CC1FFC97248C9F5E00C6A3D7 /* SceneDelegate.swift in Sources */,

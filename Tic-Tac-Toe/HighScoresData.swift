@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct PlayerData {
+struct ScoreData {
+    
+    
     
     static var xScoreX: Int = 0
     static var oScoreO: Int = 0

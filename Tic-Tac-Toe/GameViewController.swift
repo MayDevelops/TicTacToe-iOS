@@ -76,12 +76,12 @@ class GameViewController: UIViewController {
                 if gameState[combination[0]] == 1
                 {
                     WinnerLabel.text = "CROSS HAS WON!"
-                    PlayerData.xScoreX += 1
+                    ScoreData.xScoreX += 1
                 }
                 else
                 {
                     WinnerLabel.text = "NOUGHT HAS WON!"
-                    PlayerData.oScoreO += 1
+                    ScoreData.oScoreO += 1
 
 
                 }
