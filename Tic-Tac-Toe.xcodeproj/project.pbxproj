@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -102,7 +102,6 @@
 		CC1FFC93248C9F5E00C6A3D7 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
-				CCB82DCC24BC0E6600963209 /* GoogleService-Info.plist */,
 				CC1FFC94248C9F5E00C6A3D7 /* AppDelegate.swift */,
 				CC1FFC96248C9F5E00C6A3D7 /* SceneDelegate.swift */,
 				CC1FFC9B248C9F5E00C6A3D7 /* ContentView.swift */,
@@ -113,11 +112,12 @@
 				CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */,
 				CC37BFF824A5B38F0091322D /* HighScoresData.swift */,
 				CC6818BF24BAB98F00033ED0 /* SegueClasses */,
-				CC1FFC9D248C9F5F00C6A3D7 /* Assets.xcassets */,
 				CC1FFCA2248C9F5F00C6A3D7 /* LaunchScreen.storyboard */,
 				CC1FFCAB248C9FF300C6A3D7 /* Main.storyboard */,
 				CC1FFCA5248C9F5F00C6A3D7 /* Info.plist */,
+				CCB82DCC24BC0E6600963209 /* GoogleService-Info.plist */,
 				CC1FFC98248C9F5E00C6A3D7 /* Tic_Tac_Toe.xcdatamodeld */,
+				CC1FFC9D248C9F5F00C6A3D7 /* Assets.xcassets */,
 				CC1FFC9F248C9F5F00C6A3D7 /* Preview Content */,
 			);
 			path = "Tic-Tac-Toe";
@@ -157,7 +157,6 @@
 				283D11346A8D7AE59F16B7AF /* Pods-Tic-Tac-Toe.debug.xcconfig */,
 				FE5D15152969218898113487 /* Pods-Tic-Tac-Toe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

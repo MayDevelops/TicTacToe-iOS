@@ -9,14 +9,21 @@
 import UIKit
 
 class PlayerDataViewController: UIViewController {
-
+    @IBOutlet weak var gameBoard: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        SetUpConstraints()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func SetUpConstraints() {
+        gameBoard.alpha = 0.75
+        gameBoard.center.x = self.view.center.x
+        gameBoard.center.y = self.view.center.y
+        
+    }
     /*
     // MARK: - Navigation
 

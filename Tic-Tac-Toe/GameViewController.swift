@@ -13,40 +13,40 @@ class GameViewController: UIViewController {
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     var gameIsActive = true
-    @IBOutlet weak var GameBoard: UIImageView!
+    @IBOutlet weak var gameBoard: UIImageView!
     
-    @IBOutlet weak var PlayAgain: UIButton!
+    @IBOutlet weak var playAgain: UIButton!
     
-    @IBOutlet weak var WinnerLabel: UILabel!
+    @IBOutlet weak var winningLabel: UILabel!
 
-    @IBOutlet weak var Grid1: UIButton!
-    @IBOutlet weak var Grid2: UIButton!
-    @IBOutlet weak var Grid3: UIButton!
-    @IBOutlet weak var Grid4: UIButton!
-    @IBOutlet weak var Grid5: UIButton!
-    @IBOutlet weak var Grid6: UIButton!
-    @IBOutlet weak var Grid7: UIButton!
-    @IBOutlet weak var Grid8: UIButton!
-    @IBOutlet weak var Grid9: UIButton!
+    @IBOutlet weak var grid1: UIButton!
+    @IBOutlet weak var grid2: UIButton!
+    @IBOutlet weak var grid3: UIButton!
+    @IBOutlet weak var grid4: UIButton!
+    @IBOutlet weak var grid5: UIButton!
+    @IBOutlet weak var grid6: UIButton!
+    @IBOutlet weak var grid7: UIButton!
+    @IBOutlet weak var grid8: UIButton!
+    @IBOutlet weak var grid9: UIButton!
     
     
     
     func setupConstraints() {
-        GameBoard.center.x = self.view.center.x
-        GameBoard.center.y = self.view.center.y
-        Grid1.frame = CGRect(x:10, y:230, width:100, height:100)
-        Grid2.frame = CGRect(x:137.5, y:230, width:100, height:100)
-        Grid3.frame = CGRect(x:265, y:230, width:100, height:100)
-        Grid4.frame = CGRect(x:10, y:357.5, width:100, height:100)
-        Grid5.frame = CGRect(x:137.5, y:357.5, width:100, height:100)
-        Grid6.frame = CGRect(x:265, y:357.5, width:100, height:100)
-        Grid7.frame = CGRect(x:10, y:485, width:100, height:100)
-        Grid8.frame = CGRect(x:137.5, y:485, width:100, height:100)
-        Grid9.frame = CGRect(x:265, y:485, width:100, height:100)
+        gameBoard.center.x = self.view.center.x
+        gameBoard.center.y = self.view.center.y
+        grid1.frame = CGRect(x:10, y:230, width:100, height:100)
+        grid2.frame = CGRect(x:137.5, y:230, width:100, height:100)
+        grid3.frame = CGRect(x:265, y:230, width:100, height:100)
+        grid4.frame = CGRect(x:10, y:357.5, width:100, height:100)
+        grid5.frame = CGRect(x:137.5, y:357.5, width:100, height:100)
+        grid6.frame = CGRect(x:265, y:357.5, width:100, height:100)
+        grid7.frame = CGRect(x:10, y:485, width:100, height:100)
+        grid8.frame = CGRect(x:137.5, y:485, width:100, height:100)
+        grid9.frame = CGRect(x:265, y:485, width:100, height:100)
         
-        PlayAgain.frame = CGRect(x: self.view.frame.size.width/2 - PlayAgain.frame.size.width/2, y: 700, width: PlayAgain.frame.width, height: PlayAgain.frame.height)
+        playAgain.frame = CGRect(x: self.view.frame.size.width/2 - playAgain.frame.size.width/2, y: 700, width: playAgain.frame.width, height: playAgain.frame.height)
         
-        WinnerLabel.frame = CGRect(x: self.view.frame.size.width/2 - WinnerLabel.frame.size.width/2, y: 92, width: WinnerLabel.frame.width, height: WinnerLabel.frame.height)
+        winningLabel.frame = CGRect(x: self.view.frame.size.width/2 - winningLabel.frame.size.width/2, y: 92, width: winningLabel.frame.width, height: winningLabel.frame.height)
     }
     
     @IBAction func action(_ sender: AnyObject)
@@ -75,19 +75,19 @@ class GameViewController: UIViewController {
                 
                 if gameState[combination[0]] == 1
                 {
-                    WinnerLabel.text = "CROSS HAS WON!"
+                    winningLabel.text = "CROSS HAS WON!"
                     ScoreData.xScoreX += 1
                 }
                 else
                 {
-                    WinnerLabel.text = "NOUGHT HAS WON!"
+                    winningLabel.text = "NOUGHT HAS WON!"
                     ScoreData.oScoreO += 1
 
 
                 }
                 
                 playAgainButton.isHidden = false
-                WinnerLabel.isHidden = false
+                winningLabel.isHidden = false
             }
         }
         
@@ -104,8 +104,8 @@ class GameViewController: UIViewController {
         
         if gameIsActive == false
         {
-            WinnerLabel.text = "IT WAS A DRAW"
-            WinnerLabel.isHidden = false
+            winningLabel.text = "IT WAS A DRAW"
+            winningLabel.isHidden = false
             playAgainButton.isHidden = false
         }
     }
@@ -119,7 +119,7 @@ class GameViewController: UIViewController {
         activePlayer = 1
         
         playAgainButton.isHidden = true
-        WinnerLabel.isHidden = true
+        winningLabel.isHidden = true
         
         for i in 1...9
         {

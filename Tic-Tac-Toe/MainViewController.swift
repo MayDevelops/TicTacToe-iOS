@@ -10,30 +10,41 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var ToGame: UIButton!
-    @IBOutlet weak var ToHighScores: UIButton!
-    @IBOutlet weak var GameBoard: UIImageView!
-    @IBOutlet weak var EntireView: UIView!
-    @IBOutlet weak var StackView: UIStackView!
+    @IBOutlet weak var toGame: UIButton!
+    @IBOutlet weak var toHighScores: UIButton!
+    @IBOutlet weak var gameBoard: UIImageView!
+    @IBOutlet weak var entireView: UIView!
     
 
     
     func SetUpConstraints() {
-        GameBoard.alpha = 0.75
-        ToGame.layer.cornerRadius = 10
-        ToHighScores.layer.cornerRadius = 10
-        GameBoard.center.x = self.view.center.x
-        GameBoard.center.y = self.view.center.y
+        gameBoard.alpha = 0.75
+        toGame.layer.cornerRadius = 10
+        toHighScores.layer.cornerRadius = 10
+        gameBoard.center.x = self.view.center.x
+        gameBoard.center.y = self.view.center.y
         
-        ToGame.frame = CGRect(x: self.view.frame.size.width/2 - ToGame.frame.size.width/2, y: 230, width: 100, height: 100)
-        ToHighScores.frame = CGRect(x: self.view.frame.size.width/2 - ToHighScores.frame.size.width/2, y: 357.5, width: 100, height: 100)
+        toGame.frame = CGRect(x: self.view.frame.size.width/2 - toGame.frame.size.width/2, y: 230, width: 100, height: 100)
+        toHighScores.frame = CGRect(x: self.view.frame.size.width/2 - toHighScores.frame.size.width/2, y: 357.5, width: 100, height: 100)
     }
     
     //hellotest
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUpConstraints()
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SpacingForTerminal()
+        print("--------------FIREBASE DATA ABOVE-----------------")
+        print("\n")
+        print("\n")
+    }
+    func SpacingForTerminal() {
+        for _ in 1...10 {
+            print("\n")
+        }
+   
     }
 }

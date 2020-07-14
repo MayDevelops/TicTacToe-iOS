@@ -7,19 +7,48 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HighScoresViewController: UIViewController {
     
+    private let database = Database.database().reference()
+    
     @IBOutlet weak var xScore: UILabel!
     @IBOutlet weak var oScore: UILabel!
+    @IBAction func testButton(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        database.child("something").observeSingleEvent(of: .value, with: { snapshot in
+            guard let value = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            print ("Value: \(value)")
+        })
         xScore.text = String(ScoreData.xScoreX)
         oScore.text = String(ScoreData.oScoreO)
         
-        // Do any additional setup after loading the view.
+        
+        let button = UIButton(frame: CGRect(x: 200, y:200, width: view.frame.size.width - 40, height: 50))
+        button.setTitle("Test Entry", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .link
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
+        
     }
+    
+    @objc private func addNewEntry() {
+        let object: [String: Any] = [
+            "name": "iOS Testy" as NSObject,
+            "AnotherTest": "yeppers"
+        ]
+        database.child("something").setValue(object)
+    }
+    
 
     /*
     // MARK: - Navigation

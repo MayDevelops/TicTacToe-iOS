@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="" destinationCreationSelector="ToGame:" customClass="BottomCardSegue" customModule="Tic_Tac_Toe" customModuleProvider="target" id="lHk-zw-IxM"/>
+                                    <segue destination="V1H-7l-pgd" kind="custom" customClass="BottomCardSegue" customModule="Tic_Tac_Toe" customModuleProvider="target" id="L3y-aY-8AR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaN-Gi-EOZ">
@@ -52,116 +52,15 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="EntireView" destination="kaT-YO-sSX" id="9dG-4E-GUs"/>
-                        <outlet property="GameBoard" destination="Dt3-q5-hCJ" id="QUD-hg-p8B"/>
-                        <outlet property="ToGame" destination="RkF-UM-e9Y" id="4lU-wk-3eC"/>
-                        <outlet property="ToHighScores" destination="kaN-Gi-EOZ" id="i5r-jD-j7u"/>
+                        <outlet property="entireView" destination="kaT-YO-sSX" id="9dG-4E-GUs"/>
+                        <outlet property="gameBoard" destination="Dt3-q5-hCJ" id="QUD-hg-p8B"/>
+                        <outlet property="toGame" destination="RkF-UM-e9Y" id="4lU-wk-3eC"/>
+                        <outlet property="toHighScores" destination="kaN-Gi-EOZ" id="i5r-jD-j7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKj-1Y-d0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5229" y="-102"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8dw-U5-8l2">
-            <objects>
-                <viewController id="8V7-0G-okP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fGl-EQ-n3G"/>
-                        <viewControllerLayoutGuide type="bottom" id="9ij-qc-hyt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gc8-XL-Wx6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LaF-Ag-1gv">
-                                <rect key="frame" x="125" y="89" width="240" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Plx-oB-CxN">
-                                <rect key="frame" x="159" y="212" width="210" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-6O-Bll">
-                                <rect key="frame" x="125" y="122" width="148" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="X"/>
-                                    <segment title="O"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kW-8l-bVw">
-                                <rect key="frame" x="0.0" y="44" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back" image="BackButtonIcon.png"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-eJ-Yq1">
-                                <rect key="frame" x="20" y="102" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opponent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-vl-3Wy">
-                                <rect key="frame" x="20" y="225" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syd-hh-qnK">
-                                <rect key="frame" x="36" y="131" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39t-4R-6DV">
-                                <rect key="frame" x="36" y="254" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who Goes First?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeR-0l-z0b">
-                                <rect key="frame" x="36" y="359" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1oR-nJ-8Qe">
-                                <rect key="frame" x="125" y="244" width="148" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="X"/>
-                                    <segment title="O"/>
-                                </segments>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L6M-m9-jYa">
-                                <rect key="frame" x="174" y="369" width="148" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="X"/>
-                                    <segment title="O"/>
-                                </segments>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsS-iC-jbD">
-                                <rect key="frame" x="247" y="462" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To Game"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ujV-uS-Aax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4036.2318840579715" y="298.66071428571428"/>
         </scene>
         <!--GameViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -276,24 +175,24 @@
                         <gestureRecognizers/>
                     </view>
                     <connections>
-                        <outlet property="GameBoard" destination="EoY-K4-Kpg" id="vmJ-Cf-wxL"/>
-                        <outlet property="Grid1" destination="kWH-Og-Lch" id="RwM-6t-3at"/>
-                        <outlet property="Grid2" destination="fwg-Zt-REh" id="rjG-Ml-VB0"/>
-                        <outlet property="Grid3" destination="0Ap-IF-aF7" id="3zc-Qq-Um7"/>
-                        <outlet property="Grid4" destination="Ibt-aG-D3o" id="LYZ-p0-Uuw"/>
-                        <outlet property="Grid5" destination="lae-6Y-E6y" id="laU-iw-UQE"/>
-                        <outlet property="Grid6" destination="AJR-vX-4BS" id="Ssf-Xd-5Gf"/>
-                        <outlet property="Grid7" destination="DZk-QJ-hk7" id="R7Q-3B-8S5"/>
-                        <outlet property="Grid8" destination="XIY-84-psj" id="ePY-Hu-R5l"/>
-                        <outlet property="Grid9" destination="tzz-FE-i41" id="jwx-LX-twQ"/>
-                        <outlet property="PlayAgain" destination="Zgh-De-384" id="Ppv-Lu-RP6"/>
-                        <outlet property="WinnerLabel" destination="bux-iS-etP" id="NJ7-Ga-uH6"/>
+                        <outlet property="gameBoard" destination="EoY-K4-Kpg" id="vmJ-Cf-wxL"/>
+                        <outlet property="grid1" destination="kWH-Og-Lch" id="RwM-6t-3at"/>
+                        <outlet property="grid2" destination="fwg-Zt-REh" id="rjG-Ml-VB0"/>
+                        <outlet property="grid3" destination="0Ap-IF-aF7" id="3zc-Qq-Um7"/>
+                        <outlet property="grid4" destination="Ibt-aG-D3o" id="LYZ-p0-Uuw"/>
+                        <outlet property="grid5" destination="lae-6Y-E6y" id="laU-iw-UQE"/>
+                        <outlet property="grid6" destination="AJR-vX-4BS" id="Ssf-Xd-5Gf"/>
+                        <outlet property="grid7" destination="DZk-QJ-hk7" id="R7Q-3B-8S5"/>
+                        <outlet property="grid8" destination="XIY-84-psj" id="ePY-Hu-R5l"/>
+                        <outlet property="grid9" destination="tzz-FE-i41" id="jwx-LX-twQ"/>
+                        <outlet property="playAgain" destination="Zgh-De-384" id="Ppv-Lu-RP6"/>
                         <outlet property="playAgainButton" destination="Zgh-De-384" id="SDF-ti-unf"/>
+                        <outlet property="winningLabel" destination="bux-iS-etP" id="NJ7-Ga-uH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3565" y="-102"/>
+            <point key="canvasLocation" x="-3248" y="-89"/>
         </scene>
         <!--HighScoresViewController-->
         <scene sceneID="UUJ-sS-B1d">
@@ -359,9 +258,130 @@
             </objects>
             <point key="canvasLocation" x="-4187" y="-1379"/>
         </scene>
+        <!--Player Data View Controller-->
+        <scene sceneID="sbj-6W-q5S">
+            <objects>
+                <viewController id="V1H-7l-pgd" customClass="PlayerDataViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EYK-pe-dE4"/>
+                        <viewControllerLayoutGuide type="bottom" id="8B1-sy-OPY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ACr-hc-Hx4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-bU-rvP">
+                                <rect key="frame" x="125" y="89" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80980420109999995" green="0.62825691699999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aag-VV-d4f">
+                                <rect key="frame" x="159" y="212" width="210" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84152363990000001" green="0.67415139729999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-TE-f7P">
+                                <rect key="frame" x="125" y="122" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84152363990000001" green="0.67415139729999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="X"/>
+                                    <segment title="O"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-Zn-BpI">
+                                <rect key="frame" x="0.0" y="44" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back" image="BackButtonIcon.png"/>
+                                <connections>
+                                    <segue destination="gHe-O3-Wmd" kind="custom" customClass="BottomCardSegue" customModule="Tic_Tac_Toe" customModuleProvider="target" id="BBa-ge-A8i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-Yj-6TC">
+                                <rect key="frame" x="20" y="102" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opponent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-Yz-a6J">
+                                <rect key="frame" x="20" y="225" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="161-de-sGa">
+                                <rect key="frame" x="36" y="131" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Playing as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MD-yp-B7g">
+                                <rect key="frame" x="36" y="254" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who Goes First?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-g7-RMv">
+                                <rect key="frame" x="36" y="359" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ydF-Gi-DsE">
+                                <rect key="frame" x="125" y="244" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="X"/>
+                                    <segment title="O"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UHY-GG-x7w">
+                                <rect key="frame" x="174" y="369" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="X"/>
+                                    <segment title="O"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bO-Qe-wf8">
+                                <rect key="frame" x="250" y="667" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="To Game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="BottomCardSegue" customModule="Tic_Tac_Toe" customModuleProvider="target" id="dbe-WZ-RZg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoardSeeThrough.png" translatesAutoresizingMaskIntoConstraints="NO" id="tyi-GD-ODs">
+                                <rect key="frame" x="20" y="261" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.79222598147324286" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameBoard" destination="tyi-GD-ODs" id="TQ8-VV-X6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-xV-Jun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4268" y="140"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Y8V-lw-YHy"/>
+        <segue reference="BBa-ge-A8i"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackButtonIcon.png" width="225" height="225"/>
