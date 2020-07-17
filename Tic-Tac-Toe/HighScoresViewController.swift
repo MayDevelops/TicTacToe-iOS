@@ -15,6 +15,9 @@ class HighScoresViewController: UIViewController {
     
     @IBOutlet weak var xScore: UILabel!
     @IBOutlet weak var oScore: UILabel!
+    @IBOutlet weak var playerXName: UILabel!
+    @IBOutlet weak var playerOName: UILabel!
+    
     @IBAction func testButton(_ sender: Any) {
     }
     
@@ -30,8 +33,12 @@ class HighScoresViewController: UIViewController {
         })
         xScore.text = String(ScoreData.xScoreX)
         oScore.text = String(ScoreData.oScoreO)
+        playerXName.text = PlayerData.playerXName
+        playerOName.text = PlayerData.playerOName
         
-        
+        print (PlayerData.playerOName) //DEBUG
+        print (PlayerData.playerXName) //DEBUG
+
         let button = UIButton(frame: CGRect(x: 200, y:200, width: view.frame.size.width - 40, height: 50))
         button.setTitle("Test Entry", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -39,6 +46,8 @@ class HighScoresViewController: UIViewController {
         view.addSubview(button)
         button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
         
+        
+        playerOName.frame = CGRect(x: 20, y:235, width: 150, height: 50)
     }
     
     @objc private func addNewEntry() {

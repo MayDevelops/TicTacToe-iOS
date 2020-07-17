@@ -29,7 +29,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var grid8: UIButton!
     @IBOutlet weak var grid9: UIButton!
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupConstraints()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
     
     func setupConstraints() {
         gameBoard.center.x = self.view.center.x
@@ -75,12 +79,12 @@ class GameViewController: UIViewController {
                 
                 if gameState[combination[0]] == 1
                 {
-                    winningLabel.text = "CROSS HAS WON!"
+                    winningLabel.text = "\(PlayerData.playerXName) HAS WON!"
                     ScoreData.xScoreX += 1
                 }
                 else
                 {
-                    winningLabel.text = "NOUGHT HAS WON!"
+                    winningLabel.text = "\(PlayerData.playerOName) HAS WON!"
                     ScoreData.oScoreO += 1
 
 
@@ -129,11 +133,7 @@ class GameViewController: UIViewController {
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupConstraints()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
