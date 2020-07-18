@@ -68,10 +68,11 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
     @IBAction func CharSelectorTop(_ sender: Any) {
         if charSelectorTop.selectedSegmentIndex == 0 {
             charSelectorBot.selectedSegmentIndex = 1
-            
+            NameSorting(self)
             
         } else if charSelectorTop.selectedSegmentIndex == 1 {
             charSelectorBot.selectedSegmentIndex = 0
+            NameSorting(self)
         }
     }
     

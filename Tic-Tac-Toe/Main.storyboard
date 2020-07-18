@@ -282,6 +282,9 @@
                                 <color key="backgroundColor" red="0.80980420109999995" green="0.62825691699999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NameSorting:" destination="V1H-7l-pgd" eventType="editingDidEnd" id="0CC-f6-Zad"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aag-VV-d4f">
                                 <rect key="frame" x="0.0" y="247" width="414" height="34"/>
