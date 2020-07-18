@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var gameBoard: UIImageView!
     @IBOutlet weak var entireView: UIView!
     
-
+    
     
     func SetUpConstraints() {
         gameBoard.alpha = 0.75
@@ -45,6 +45,6 @@ class MainViewController: UIViewController {
         for _ in 1...10 {
             print("\n")
         }
-   
+        
     }
 }

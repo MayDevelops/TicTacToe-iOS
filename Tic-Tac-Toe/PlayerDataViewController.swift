@@ -26,7 +26,7 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
         SetUpSegmentedControls()
         playerNameTop.returnKeyType = UIReturnKeyType.done
         playerNameBot.returnKeyType = UIReturnKeyType.done
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -48,39 +48,53 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
         charSelectorBot.selectedSegmentIndex = 1
     }
     
-    @IBAction func buttonPressedTop(_ sender: Any) {
-        PlayerData.playerXName = playerNameTop.text!
-        playerNameTop.resignFirstResponder()
+    @IBAction func NameSorting(_ sender: Any) {
+        if charSelectorTop.selectedSegmentIndex == 0 {
+            PlayerData.playerXName = playerNameTop.text!
+            PlayerData.playerOName = playerNameBot.text!
+            
+        } else if charSelectorTop.selectedSegmentIndex == 1 {
+            PlayerData.playerXName = playerNameBot.text!
+            PlayerData.playerOName = playerNameTop.text!
+        }
     }
-    @IBAction func buttonPressedBot(_ sender: Any) {
-           PlayerData.playerOName = playerNameBot.text!
-       }
     
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      textField.resignFirstResponder()
-      return true
-  }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
-  
+    
     @IBAction func CharSelectorTop(_ sender: Any) {
         if charSelectorTop.selectedSegmentIndex == 0 {
             charSelectorBot.selectedSegmentIndex = 1
+            
+            
         } else if charSelectorTop.selectedSegmentIndex == 1 {
             charSelectorBot.selectedSegmentIndex = 0
         }
     }
     
+    @IBAction func CharSelectorBot(_ sender: Any) {
+        if charSelectorBot.selectedSegmentIndex == 0 {
+            charSelectorTop.selectedSegmentIndex = 1
+            
+            
+        } else if charSelectorBot.selectedSegmentIndex == 1 {
+            charSelectorTop.selectedSegmentIndex = 0
+        }
+    }
     
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playAgain: UIButton!
     
     @IBOutlet weak var winningLabel: UILabel!
-
+    
     @IBOutlet weak var grid1: UIButton!
     @IBOutlet weak var grid2: UIButton!
     @IBOutlet weak var grid3: UIButton!
@@ -86,8 +86,8 @@ class GameViewController: UIViewController {
                 {
                     winningLabel.text = "\(PlayerData.playerOName) HAS WON!"
                     ScoreData.oScoreO += 1
-
-
+                    
+                    
                 }
                 
                 playAgainButton.isHidden = false
@@ -132,15 +132,15 @@ class GameViewController: UIViewController {
         }
     }
     
-
     
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-     
-
+    
+    
+    
 }
 

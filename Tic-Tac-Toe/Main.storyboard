@@ -282,9 +282,6 @@
                                 <color key="backgroundColor" red="0.80980420109999995" green="0.62825691699999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="buttonPressedTop:" destination="V1H-7l-pgd" eventType="editingDidEnd" id="CIO-NU-r67"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aag-VV-d4f">
                                 <rect key="frame" x="0.0" y="247" width="414" height="34"/>
@@ -293,7 +290,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="buttonPressedBot:" destination="V1H-7l-pgd" eventType="editingDidEnd" id="yfz-K7-sZv"/>
+                                    <action selector="NameSorting:" destination="V1H-7l-pgd" eventType="editingDidEnd" id="cvT-oZ-p5U"/>
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-TE-f7P">
@@ -350,6 +347,9 @@
                                     <segment title="O"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="CharSelectorBot:" destination="V1H-7l-pgd" eventType="valueChanged" id="bke-7F-7iT"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.79222598147324286" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

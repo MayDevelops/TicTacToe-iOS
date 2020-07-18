@@ -9,9 +9,12 @@
 import Foundation
 
 class PlayerData {
-    static var playerXName: String = "XName"
+    static var tempName1: String = ""
+    static var tempName2: String = ""
+    
+    static var playerXName: String = ""
     static var playerXWins:Int = 0
     
-    static var playerOName: String = "OName"
+    static var playerOName: String = ""
     static var playerOWins:Int = 0
 }
