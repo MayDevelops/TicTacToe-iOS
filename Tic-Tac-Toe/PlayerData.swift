@@ -17,4 +17,6 @@ class PlayerData {
     
     static var playerOName: String = ""
     static var playerOWins:Int = 0
+    
+    static var activePlayer: Int = 1
 }

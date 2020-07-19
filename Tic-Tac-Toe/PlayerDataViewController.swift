@@ -79,13 +79,23 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
     @IBAction func CharSelectorBot(_ sender: Any) {
         if charSelectorBot.selectedSegmentIndex == 0 {
             charSelectorTop.selectedSegmentIndex = 1
-            
+            NameSorting(self)
+
             
         } else if charSelectorBot.selectedSegmentIndex == 1 {
             charSelectorTop.selectedSegmentIndex = 0
+            NameSorting(self)
+
         }
     }
     
+    @IBAction func CharSelectorWho(_ sender: Any) {
+        if charSelectorWho.selectedSegmentIndex == 0 {
+            PlayerData.activePlayer = 1
+        } else if charSelectorWho.selectedSegmentIndex == 1 {
+            PlayerData.activePlayer = 2
+        }
+    }
     
     
     /*
