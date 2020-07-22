@@ -29,6 +29,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var grid8: UIButton!
     @IBOutlet weak var grid9: UIButton!
     
+    @IBOutlet weak var xScore: UILabel!
+    @IBOutlet weak var oScore: UILabel!
+    @IBOutlet weak var playerXName: UILabel!
+    @IBOutlet weak var playerOName: UILabel!
+    @IBOutlet weak var backgroundLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
@@ -48,9 +54,19 @@ class GameViewController: UIViewController {
         grid8.frame = CGRect(x:137.5, y:485, width:100, height:100)
         grid9.frame = CGRect(x:265, y:485, width:100, height:100)
         
-        playAgain.frame = CGRect(x: self.view.frame.size.width/2 - playAgain.frame.size.width/2, y: 700, width: playAgain.frame.width, height: playAgain.frame.height)
+        playAgain.frame = CGRect(x: self.view.frame.size.width / 2 - playAgain.frame.size.width / 2, y: 375, width: playAgain.frame.width, height: playAgain.frame.height)
         
         winningLabel.frame = CGRect(x: self.view.frame.size.width/2 - winningLabel.frame.size.width/2, y: 92, width: winningLabel.frame.width, height: winningLabel.frame.height)
+        
+        xScore.text = String(ScoreData.xScoreX)
+        oScore.text = String(ScoreData.oScoreO)
+        playerXName.text = PlayerData.playerXName
+        playerOName.text = PlayerData.playerOName
+        playerXName.frame = CGRect(x: 15, y:600, width: 100, height: 50)
+        playerOName.frame = CGRect(x: 270, y:600, width: 100, height: 50)
+        xScore.frame = CGRect(x:29, y: 650, width: 75, height: 75)
+        oScore.frame = CGRect(x:283, y:650, width: 75, height: 75)
+        backgroundLabel.frame = CGRect(x:0, y:600, width: 414, height: 50)
     }
     
     @IBAction func action(_ sender: AnyObject)
@@ -121,7 +137,8 @@ class GameViewController: UIViewController {
         
         playAgainButton.isHidden = true
         winningLabel.isHidden = true
-        
+        xScore.text = String(ScoreData.xScoreX)
+        oScore.text = String(ScoreData.oScoreO)
         for i in 1...9
         {
             let button = view.viewWithTag(i) as! UIButton

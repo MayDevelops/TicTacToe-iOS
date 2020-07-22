@@ -28,6 +28,7 @@
 		CC6818C124BAC6FD00033ED0 /* BoardSeeThrough.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */; };
 		CC6D770D24A315C900424959 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6D770C24A315C900424959 /* MainViewController.swift */; };
 		CCB82DCD24BC0E6600963209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB82DCC24BC0E6600963209 /* GoogleService-Info.plist */; };
+		CCD66E7E24C7FDE400362385 /* ForwardButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD66E7D24C7FDE400362385 /* ForwardButtonIcon.png */; };
 		CCDDCB7D24C13075008BAC57 /* BackButtonIconYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDDCB7C24C13075008BAC57 /* BackButtonIconYellow.png */; };
 		CCED2F7B24C385F900BE6E73 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = CCED2F7A24C385F900BE6E73 /* AppIcon.appiconset */; };
 		CCF777E724A1B75400F97DDA /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */; };
@@ -58,6 +59,7 @@
 		CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoardSeeThrough.png; sourceTree = "<group>"; };
 		CC6D770C24A315C900424959 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CCB82DCC24BC0E6600963209 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CCD66E7D24C7FDE400362385 /* ForwardButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ForwardButtonIcon.png; sourceTree = "<group>"; };
 		CCDDCB7C24C13075008BAC57 /* BackButtonIconYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonIconYellow.png; sourceTree = "<group>"; };
 		CCED2F7A24C385F900BE6E73 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		CCF777E624A1B75400F97DDA /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				CC6818BB24BAA1A300033ED0 /* BackButtonIcon.png */,
 				CC6818C024BAC6FD00033ED0 /* BoardSeeThrough.png */,
 				CCDDCB7C24C13075008BAC57 /* BackButtonIconYellow.png */,
+				CCD66E7D24C7FDE400362385 /* ForwardButtonIcon.png */,
 				CCED2F7A24C385F900BE6E73 /* AppIcon.appiconset */,
 			);
 			path = Media;
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1FFCB0248C9FFF00C6A3D7 /* Board.png in Resources */,
+				CCD66E7E24C7FDE400362385 /* ForwardButtonIcon.png in Resources */,
 				CC1FFCA4248C9F5F00C6A3D7 /* LaunchScreen.storyboard in Resources */,
 				CC1FFCA1248C9F5F00C6A3D7 /* Preview Assets.xcassets in Resources */,
 				CC6818BC24BAA1A300033ED0 /* BackButtonIcon.png in Resources */,

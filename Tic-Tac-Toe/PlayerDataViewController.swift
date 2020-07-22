@@ -17,6 +17,8 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var playerNameBot: UITextField!
     @IBOutlet weak var charSelectorBot: UISegmentedControl!
     @IBOutlet weak var charSelectorWho: UISegmentedControl!
+    @IBOutlet weak var playerWhoFirst: UILabel!
+    @IBOutlet weak var forwardArrow: UIButton!
     
     
     override func viewDidLoad() {
@@ -35,7 +37,13 @@ class PlayerDataViewController: UIViewController, UITextFieldDelegate {
         gameBoard.alpha = 0.75
         gameBoard.center.x = self.view.center.x
         gameBoard.center.y = self.view.center.y
+        playerWhoFirst.layer.cornerRadius = 5
         
+        charSelectorTop.frame = CGRect(x: self.view.frame.size.width/2 - charSelectorTop.frame.size.width/2, y: 164, width: 150, height: 35)
+        charSelectorBot.frame = CGRect(x: self.view.frame.size.width/2 - charSelectorBot.frame.size.width/2, y: 279, width: 150, height: 35)
+        charSelectorWho.frame = CGRect(x: self.view.frame.size.width/2 - charSelectorWho.frame.size.width/2, y: 461, width: 150, height: 35)
+        
+        forwardArrow.frame = CGRect(x:325, y:44, width: 50, height: 50)
     }
     
     func SetUpTextDelegates() {
