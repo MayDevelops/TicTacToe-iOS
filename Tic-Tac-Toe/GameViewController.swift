@@ -38,6 +38,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
+        PopulateDatabaseWithNames()
+        PlayerData.playerNames = [PlayerData.playerXName,PlayerData.playerOName] //populates player names for upload after the user has input their names
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -93,13 +95,14 @@ class GameViewController: UIViewController {
                 if gameState[combination[0]] == 1
                 {
                     winningLabel.text = "\(PlayerData.playerXName) HAS WON!"
-                    ScoreData.xScoreX += 1
+                    PlayerData.playerXWins += 1
+                    PlayerData.playerScores[0] += 1
                 }
                 else
                 {
                     winningLabel.text = "\(PlayerData.playerOName) HAS WON!"
-                    ScoreData.oScoreO += 1
-                    
+                    PlayerData.playerOWins += 1
+                    PlayerData.playerScores[1] += 1
                     
                 }
                 
@@ -131,19 +134,32 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
     @IBAction func playAgain(_ sender: AnyObject)
     {
+        PopulateDatabaseWithScores()
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = PlayerData.activePlayer
         
         playAgainButton.isHidden = true
         winningLabel.isHidden = true
-        xScore.text = String(ScoreData.xScoreX)
-        oScore.text = String(ScoreData.oScoreO)
+        xScore.text = String(PlayerData.playerXWins)
+        oScore.text = String(PlayerData.playerOWins)
         for i in 1...9
         {
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for: UIControl.State())
         }
+    }
+    
+    
+    func PopulateDatabaseWithNames() {
+        PlayerData.playerNames.append(playerXName.text!)
+        PlayerData.playerNames.append(playerOName.text!)
+    }
+    
+    func PopulateDatabaseWithScores() {
+        let objectData: [String: Int] = [PlayerData.playerNames[0] : PlayerData.playerScores[0] , PlayerData.playerNames[1] : PlayerData.playerScores[1]]
+        
+        HighScoresViewController.database.child("UsersAndWins").setValue(objectData)
     }
     
     
