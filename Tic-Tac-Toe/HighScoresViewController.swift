@@ -11,23 +11,25 @@ import FirebaseDatabase
 
 class HighScoresViewController: UIViewController {
     
-   static let database = Database.database().reference()
+    static let database = Database.database().reference()
+    static let ref = HighScoresViewController.database.child("Users&Scores")
+    var userNameArray = [String]()
+    var userScoreArray = [Any]()
     
-    let databasePathUsers = "Users"
+    var databaseHandle:DatabaseHandle?
     
-    var stringArray : [String : Any] = ["JC": 1 , "Maria" : 2 , "Keith" : 3 , "Kim" : 4]
+    var stringArray : [String : Int] = ["JC": 1 , "Maria" : 2 , "Keith" : 3 , "Kim" : 4]
     
     
     
     @IBAction func testButton(_ sender: Any) {
-       //FIXME: Not using this right now, but keeping code here to reference in the future.
+        //FIXME: Not using this right now, but keeping code here to reference in the future.
         
         //self.database.child("Users").childByAutoId().setValue(["username":"JC"])
         //self.database.child("Users").childByAutoId().setValue(["username":"Maria"])
-        HighScoresViewController.self.database.child("UsersAndWins").setValue(stringArray) // this array of strings overwrites the 2 previous assignments in the database
-        let objectData: [String: Int] = [PlayerData.playerNames[0] : PlayerData.playerScores[0] , PlayerData.playerNames[1] : PlayerData.playerScores[1]]
-        
-        HighScoresViewController.self.database.child("UsersAndWins").setValue(objectData)
+        //HighScoresViewController.self.database.child("UsersAndScores").setValue(stringArray) // this array of strings overwrites the 2 previous assignments in the database
+        //let objectData: [String: Int] = [PlayerData.playerNames[0] : PlayerData.playerScores[0] , PlayerData.playerNames[1] : PlayerData.playerScores[1]]
+        //HighScoresViewController.self.database.child("UsersAndScores").setValue(objectData)
         
         
     }
@@ -35,36 +37,68 @@ class HighScoresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HighScoresViewController.database.child("something").observeSingleEvent(of: .value, with: { snapshot in
-            guard let value = snapshot.value as? [String: Any] else {
-                return
-            }
+        
+        /*
+         HighScoresViewController.database.child("Users&Scores").observeSingleEvent(of: .value, with: { snapshot in
+         guard let value = snapshot.value as? [String: Int] else {
+         return
+         }
+         
+         print ("Value: \(value)")
+         })
+         */
+        
+        
+        
+        HighScoresViewController.database.child("Users&Scores").observe(.value, with: { (snapshot) in
             
-            print ("Value: \(value)")
+            let usersAndScoresDictionary = snapshot.value as? [String : Int] ?? [:] //non sorted dictionary
+            let sortedByValueDictionary = usersAndScoresDictionary.sorted { $0.1 > $1.1 } .map {$0} //this is the sorted dictionary
+            
+            print("Before Sorting...\n")
+            let dictKeys = Array(usersAndScoresDictionary.keys)
+            print (dictKeys)
+            let dictValues = Array(usersAndScoresDictionary.values)
+            print(dictValues)
+            
+            print("\nAfter Sorting...\n")
+            print(sortedByValueDictionary)
+            
+            
+            print ("\nNew testing for sorting and obtaining data...")
+            let value = snapshot.value as? NSDictionary
+            
+            
+            print (value)
+          
+
+            
+            /*
+             New idea is to:
+             get the instance of the database using the snapshot.
+             Get the dictionary of keys (in dictKeys).
+             Load all of the keys into an array here locally.
+             Then query the database for those keys.
+             Each key will be an object...? and then assign a value to that object.
+             Then assign the new created object to an array that contians the key as the username and the value as the wins.
+             Then sort those objects by value.
+             Then print those objects.
+             */
+          
+            
+            
         })
         
-        //FIXME: Not using this right now, but keeping code here to reference in the future.
-        let button = UIButton(frame: CGRect(x: 200, y:200, width: view.frame.size.width - 40, height: 50))
-        button.setTitle("Test Entry", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .link
-        view.addSubview(button)
-        button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
-        //--------------------------------------------------------------------------------
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
-    
-    @objc private func addNewEntry() {
-        //FIXME: Not using this right now, but keeping code here to reference in the future.
-
-        let object: [String: Any] = [
-            "name": "iOS Testy" as NSObject,
-            "AnotherTest": "yeppers"
-        ]
-        HighScoresViewController.database.child("something").setValue(object)
-    }
-    
-    
     /*
      // MARK: - Navigation
      

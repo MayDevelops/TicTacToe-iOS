@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gHe-O3-Wmd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NXR-js-xF3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -51,6 +51,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Play" id="SGO-rp-xLi"/>
                     <connections>
                         <outlet property="entireView" destination="kaT-YO-sSX" id="9dG-4E-GUs"/>
                         <outlet property="gameBoard" destination="Dt3-q5-hCJ" id="QUD-hg-p8B"/>
@@ -60,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKj-1Y-d0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5229" y="-102"/>
+            <point key="canvasLocation" x="-9841" y="-1496"/>
         </scene>
         <!--GameViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -215,6 +216,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                     </view>
+                    <navigationItem key="navigationItem" id="CR9-OY-6A8"/>
                     <connections>
                         <outlet property="backgroundLabel" destination="p5x-2N-bSa" id="y0c-7K-zdI"/>
                         <outlet property="gameBoard" destination="EoY-K4-Kpg" id="vmJ-Cf-wxL"/>
@@ -238,7 +240,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3249.275362318841" y="-89.0625"/>
+            <point key="canvasLocation" x="-6459" y="713"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tbA-xX-sPL">
+            <objects>
+                <tabBarController id="NXR-js-xF3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b3m-1h-gXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="U2B-bs-hlr" kind="relationship" relationship="viewControllers" id="Ifm-eH-QE4"/>
+                        <segue destination="Snm-c9-Nal" kind="relationship" relationship="viewControllers" id="nba-bB-fHj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2U-if-Yij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4636" y="-1521"/>
         </scene>
         <!--HighScoresViewController-->
         <scene sceneID="UUJ-sS-B1d">
@@ -272,15 +292,51 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Scores" id="OnW-dh-VLD"/>
+                    <navigationItem key="navigationItem" id="8F2-48-gWl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjS-Wk-qvV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4297.1014492753629" y="-721.20535714285711"/>
+            <point key="canvasLocation" x="-5243" y="-44"/>
         </scene>
-        <!--Player Data View Controller-->
+        <!--Play-->
+        <scene sceneID="wOi-Xa-MSP">
+            <objects>
+                <navigationController id="U2B-bs-hlr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Play" id="F84-cX-QGg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rwJ-WB-Ycy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V1H-7l-pgd" kind="relationship" relationship="rootViewController" id="d6J-ce-4bU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLY-qY-fwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6458" y="-820"/>
+        </scene>
+        <!--Scores-->
+        <scene sceneID="mII-x6-mMI">
+            <objects>
+                <navigationController title="Scores" id="Snm-c9-Nal" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scores" id="5De-l2-45t"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qtc-fn-Wez">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4uF-2c-B62" kind="relationship" relationship="rootViewController" id="UPM-ZN-YZb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON2-kK-HB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5243" y="-820"/>
+        </scene>
+        <!--PlayerDataViewController-->
         <scene sceneID="sbj-6W-q5S">
             <objects>
-                <viewController id="V1H-7l-pgd" customClass="PlayerDataViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PlayerDataViewController" id="V1H-7l-pgd" customClass="PlayerDataViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EYK-pe-dE4"/>
                         <viewControllerLayoutGuide type="bottom" id="8B1-sy-OPY"/>
@@ -380,6 +436,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.79222598147324286" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Play" id="eOI-QN-MeZ"/>
+                    <navigationItem key="navigationItem" id="cBQ-GN-85q"/>
                     <connections>
                         <outlet property="charSelectorBot" destination="ydF-Gi-DsE" id="HuT-mo-kk4"/>
                         <outlet property="charSelectorTop" destination="Uxo-TE-f7P" id="zse-FO-m6g"/>
@@ -393,11 +451,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-xV-Jun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4268.115942028986" y="139.95535714285714"/>
+            <point key="canvasLocation" x="-6459" y="-43"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F4g-sH-A6U"/>
+        <segue reference="d6J-ce-4bU"/>
+        <segue reference="UPM-ZN-YZb"/>
+        <segue reference="BBa-ge-A8i"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackButtonIcon.png" width="225" height="225"/>

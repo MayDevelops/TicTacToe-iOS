@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class GameViewController: UIViewController {
     var activePlayer = PlayerData.activePlayer
@@ -35,10 +36,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playerOName: UILabel!
     @IBOutlet weak var backgroundLabel: UILabel!
     
+    @IBOutlet weak var playAgainButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
-        PopulateDatabaseWithNames()
+        PopulatePlayerNamesArray()
         PlayerData.playerNames = [PlayerData.playerXName,PlayerData.playerOName] //populates player names for upload after the user has input their names
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -97,13 +100,19 @@ class GameViewController: UIViewController {
                     winningLabel.text = "\(PlayerData.playerXName) HAS WON!"
                     PlayerData.playerXWins += 1
                     PlayerData.playerScores[0] += 1
+                    xScore.text = String(PlayerData.playerXWins)
+                    oScore.text = String(PlayerData.playerOWins)
+                    PopulateDatabaseWithScores()
+                    
                 }
                 else
                 {
                     winningLabel.text = "\(PlayerData.playerOName) HAS WON!"
                     PlayerData.playerOWins += 1
                     PlayerData.playerScores[1] += 1
-                    
+                    xScore.text = String(PlayerData.playerXWins)
+                    oScore.text = String(PlayerData.playerOWins)
+                    PopulateDatabaseWithScores()
                 }
                 
                 playAgainButton.isHidden = false
@@ -131,18 +140,17 @@ class GameViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var playAgainButton: UIButton!
+    
     @IBAction func playAgain(_ sender: AnyObject)
     {
-        PopulateDatabaseWithScores()
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = PlayerData.activePlayer
         
         playAgainButton.isHidden = true
         winningLabel.isHidden = true
-        xScore.text = String(PlayerData.playerXWins)
-        oScore.text = String(PlayerData.playerOWins)
+        
+        
         for i in 1...9
         {
             let button = view.viewWithTag(i) as! UIButton
@@ -151,16 +159,15 @@ class GameViewController: UIViewController {
     }
     
     
-    func PopulateDatabaseWithNames() {
+    func PopulatePlayerNamesArray() {
         PlayerData.playerNames.append(playerXName.text!)
         PlayerData.playerNames.append(playerOName.text!)
     }
     
     func PopulateDatabaseWithScores() {
-        let objectData: [String: Int] = [PlayerData.playerNames[0] : PlayerData.playerScores[0] , PlayerData.playerNames[1] : PlayerData.playerScores[1]]
-        
-        HighScoresViewController.database.child("UsersAndWins").setValue(objectData)
-    }
+        let currentPlayers = [PlayerData.playerNames[0] : PlayerData.playerScores[0] , PlayerData.playerNames[1] : PlayerData.playerScores[1]]
+        HighScoresViewController.ref.updateChildValues(currentPlayers)
+        }
     
     
     
